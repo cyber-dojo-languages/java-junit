@@ -1,0 +1,4 @@
+This file contains the locations to download the relevent .jar files
+Current version in parentheses
+
+(1.11.13) https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone
