@@ -1,4 +1,3 @@
-This file contains the locations to download the relevent .jar files
-Current version in parentheses
+This file contains the locations where the current jar file was download from
 
-(1.11.13) https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone
+https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console/6.0.3
