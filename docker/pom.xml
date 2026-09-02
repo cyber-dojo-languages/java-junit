@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The one library a kata here compiles and runs against. It is a single
+     self-contained jar holding the JUnit platform, its engines and its console,
+     so there is nothing transitive to resolve behind it.
+
+     The version below is a starting point, not the version installed.
+     install_jars.sh moves it to its newest release before resolving. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cyber-dojo</groupId>
+  <artifactId>java-junit-jars</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-console-standalone</artifactId>
+      <version>6.0.3</version>
+    </dependency>
+  </dependencies>
+
+</project>

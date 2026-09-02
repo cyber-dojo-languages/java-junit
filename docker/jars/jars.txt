@@ -1,3 +1,0 @@
-This file contains the locations where the current jar file was download from
-
-https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console/6.0.3

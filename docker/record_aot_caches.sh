@@ -1,4 +1,9 @@
-#!/bin/bash -e
+#!/bin/bash
+# Invoked as [bash record_aot_caches.sh ...], and that ignores the shebang line,
+# so the shell options have to be set here to have any effect. Set on the shebang
+# alone they are silently absent, and a workload that failed to compile or a test
+# that failed to pass leaves an image the build then reports as a success.
+set -Eeu -o pipefail
 
 # Records the two AOT caches a kata's test run replays.
 #
@@ -17,8 +22,9 @@
 # --class-path argument and its own classloader, so they are never what the
 # cache is validated against.
 
+readonly JARS_DIR="${1:?usage: record_aot_caches.sh <jars-dir>}"
 readonly WORK_DIR=/tmp/record_aot_caches
-readonly CONSOLE_JAR=$(ls /junit/junit-platform-console-standalone-*.jar)
+readonly CONSOLE_JAR=$(ls ${JARS_DIR}/junit-platform-console-standalone-*.jar)
 readonly CACHE_DIR=/aot
 readonly JAVAC_CACHE="${CACHE_DIR}/javac.aot"
 readonly CONSOLE_CACHE="${CACHE_DIR}/junit-console.aot"
