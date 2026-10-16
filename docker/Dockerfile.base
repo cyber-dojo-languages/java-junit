@@ -1,4 +1,4 @@
-FROM ghcr.io/cyber-dojo-languages/java:b2e8ddb
+FROM ghcr.io/cyber-dojo-languages/java:9db6557
 LABEL maintainer=jon@jaggersoft.com
 
 ENV CLASSPATH=/junit/
